@@ -119,7 +119,7 @@
                                                     default => 'text-start',
                                                 },
                                             ])
-                                                colspan="{{ $cell->getColumnSpan()['default'] === 'full' ? 7 : 1 }}"
+                                                colspan="{{ $cell->getColumnSpan()['default'] === 'full' ? count($headers) : 1 }}"
                                                 style="width: {{ $cell->getMaxWidth() ?? 'auto' }}">
                                                 {{ $cell }}
                                             </td>
